@@ -1,0 +1,11 @@
+body {
+  background-color: #000;
+}
+
+#header, #form {
+  position: relative;
+  width: 100%;
+  margin: 50px auto;
+  color: #fff;
+  text-align: center;
+}
