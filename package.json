@@ -1,0 +1,23 @@
+{
+  "name": "week4-jajascript",
+  "version": "1.0.0",
+  "description": "server for the autocompletion project",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+  "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FAC10/week4-jajascript.git"
+  },
+  "author": "JAJAScript Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FAC10/week4-jajascript/issues"
+  },
+  "homepage": "https://github.com/FAC10/week4-jajascript#readme"
+}
