@@ -1,5 +1,7 @@
 body {
-  background-color: #000;
+  background: url(assets/flowers.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #header, #form {
