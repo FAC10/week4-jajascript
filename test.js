@@ -1,3 +1,2 @@
-function x (y) {
-  return y;
-} 
+var test = require('tape');
+
