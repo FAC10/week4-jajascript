@@ -1,13 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html{
+  height: 100%;
+}
+
 body {
-  background: url(assets/flowers.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  height: 100%;
+  background: url(assets/flowers_progressive.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  padding: 2em;
+  /*overflow: hidden;*/
+}
+
+.landing-title{
+  color: black;
 }
 
 #header, #form {
   position: relative;
   width: 100%;
-  margin: 50px auto;
+  margin: auto;
+  padding: 1.5em;
   color: #fff;
+  text-align: center;
+}
+
+#search-results{
+  width: 200px;
+  height: 30px;
   text-align: center;
 }
