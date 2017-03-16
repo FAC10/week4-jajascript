@@ -4,7 +4,7 @@ var path = require ('path');
 var handler = module.exports = {};
 
 handler.serveHome = function(req, res){
-  readFile(res, '/index.html')
+  readFile(res, '/index.html');
 };
 
 const readFile = (res, endpoint) => {

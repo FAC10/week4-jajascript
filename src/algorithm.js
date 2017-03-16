@@ -24,7 +24,5 @@ function getValues(obj, key) {
 
 algorithm.serveHints = function(req, res) {
   var endpoint = req.url;
-  console.log('asdfasd');
-  console.log(obj);
   getValues(obj, 'firstname');
 }
