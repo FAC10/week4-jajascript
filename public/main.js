@@ -1,6 +1,13 @@
 var userInput = '';
 var form = document.getElementById('form');
 
+form.addEventListener('keypress', function(e) {
+  var regex = '[?<>=+()*&^%$£@!#:;``~{}\[|_\\\]]';
+  if (e.key.match(regex)) {
+    e.preventDefault();
+  }
+});
+
 form.addEventListener('keyup', function(e){
 fetchRequest(getDataUrl(getUserInput(e)));
 });
