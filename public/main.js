@@ -14,11 +14,12 @@ fetchRequest(getDataUrl(getUserInput(e)));
 
 
 function getUserInput(event){
-  console.log(event);// userInput = event.target.value;
-  var key = event.key;
-  console.log(key.match(/[a-z,0-9]{1}/i));
-  if (key.match(/\w{1}/i)) {
-  // if (key.charCodeAt() > 96 && key.charCodeAt() < 123) {
+  // console.log(event);//
+  userInput = event.target.value;
+  // var key = event.key;
+  // console.log(key.match(/[a-z,0-9]{1}/i));
+  // if (key.match(/\w{1}/i)) {
+  if (key.charCodeAt() > 96 && key.charCodeAt() < 123) {
     userInput+=key;
   }
   else {
