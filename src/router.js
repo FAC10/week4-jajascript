@@ -1,4 +1,5 @@
 var handler = require('./handler.js');
+var algorithm = require('./algorithm.js');
 
 module.exports = function(req, res) {
   var endpoint = req.url;
@@ -7,7 +8,11 @@ module.exports = function(req, res) {
 
   if (endpoint === '/') {
     handler.serveHome(req, res);
-  } else {
+  }
+  else if (endpoint.indexOf('search') !== -1) {
+    algorithm.serveHints(req, res);
+  }
+  else {
     handler.servePublic(req,res);
   }
 }
