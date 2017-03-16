@@ -3,14 +3,12 @@ var path = require ('path');
 
 var algorithm = module.exports = {};
 
-var obj;
-fs.readFile('src/data.json','utf8', function(err,data) {
-  obj=data;
-});
+var obj = require('./data.json');
 
 function getValues(obj, key) {
     var objects = [];
     for (var i in obj) {
+      console.log("!!!!!!", i, obj[i])
         if (!obj.hasOwnProperty(i)) continue;
         if (typeof obj[i] == 'object') {
             objects = objects.concat(getValues(obj[i], key));
