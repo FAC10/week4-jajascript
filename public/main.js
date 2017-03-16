@@ -19,7 +19,7 @@ function getUserInput(event){
   }
 
   function getDataUrl(userInput){
-    var url = 'https://nobel-laureate-autocomplete.herokuapp.com/' + form.action + userInput;
+    var url = 'http://localhost:4000/search/' + userInput;
     // fetchRequest("GET", url);
     console.log(url);
     return url;
@@ -34,6 +34,7 @@ function fetchRequest(method, url, cb){
       cb(xhr.responseText);
     } else {
       console.log('Waiting for response');
+    console.log(method);
     }
   };
 xhr.open(method, url, true);

@@ -5,6 +5,11 @@ var algorithm = module.exports = {};
 
 algorithm.serveHints = function(req, res) {
   var endpoint = req.url;
+  var obj;
   console.log(1, 2, 3, endpoint);
-  readFile(res, endpoint)
-};
+  fs.readFile('src/data.json','utf8', function(err,data) {
+    if (err) throw err;
+    obj=data;
+    });
+    console.log(obj);
+  }
