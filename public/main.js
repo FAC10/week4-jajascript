@@ -9,7 +9,7 @@ form.addEventListener('keypress', function(e) {
 });
 
 form.addEventListener('keyup', function(e){
-fetchRequest(getDataUrl(getUserInput(e)));
+fetchRequest(form.method, getDataUrl(getUserInput(e)));
 });
 
 
@@ -18,12 +18,11 @@ function getUserInput(event){
   return userInput;
   }
 
-  function getDataUrl(userInput){
-    var url = 'http://localhost:4000/search/' + userInput;
-    // fetchRequest("GET", url);
-    console.log(url);
-    return url;
-  }
+function getDataUrl(userInput){
+  var url = 'http://localhost:4000/search/' + userInput;
+  console.log(url);
+  return url;
+}
 
 
 function fetchRequest(method, url, cb){
