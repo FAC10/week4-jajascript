@@ -11,5 +11,4 @@ algorithm.serveHints = function(req, res) {
     if (err) throw err;
     obj=data;
     });
-    console.log(obj);
   }
