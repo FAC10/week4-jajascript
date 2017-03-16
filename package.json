@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "server for the autocompletion project",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "eslint": "^3.17.1",
     "nodemon": "^1.11.0",
