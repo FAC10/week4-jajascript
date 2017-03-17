@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="main.css" class="css" type="text/css">
-  <title>Document</title>
+  <title>JAJAScript | Nobel Laureates Autocomplete</title>
 </head>
 <body>
 <header id="header">
@@ -13,7 +13,8 @@
 </header>
 
 <form id="form" method="GET" action="search/">
-  <input id='search-input' type="text" autofocus='true' placeholder='Search Nobel Laureates...' list="nobel-people">
+  <input id='search-input' autocomplete="off" type="text" autofocus='true' placeholder='Search Nobel Laureates...' list="nobel-people">
+
   <ul id="nobel-people"></ul>
 </form>
 
