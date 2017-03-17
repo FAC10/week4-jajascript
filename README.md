@@ -4,11 +4,13 @@
 I would be able to input text into a text input field which will give me back sensible suggestion as I type.
 
 ### User Story v.1.1 ###
-The user should be able to enter a string into an input box which gives back a list of nobel prize laureates, so that they can easily search for people who have won the nobel prize
+The user should be able to enter a string into an input box which gives back a list of Nobel prize laureates, so that they can easily search for people who have won the Nobel prize
 
 ## Our Approach
   First we thought about the overall structure of our code, including:
   * Modularisation
+  ![](./Untitled Diagram.png)
+
   * Testing
   * File Structure
   * Deploying on Heroku
@@ -27,15 +29,3 @@ An autocomplete app which returns a list of nobel prize laureates which is infor
 
 
 ** Pending: learnings on handling JSON object & heroku logs **
-
-## Installation instructions
-
-- Clone this repo and cd into it
-
- `git clone git@github.com:FAC10/week4-jajascript.git`
-
-- Run `npm install` to install all dependencies
-
-- Run `npm run devStart` to start the server using nodemon (which will automatically restart Node when changes are detected in your files)
-
-- Navigate to http://localhost:4000/ in your browser
