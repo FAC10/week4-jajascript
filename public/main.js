@@ -9,9 +9,19 @@ form.addEventListener('keypress', function(e) {
 });
 
 form.addEventListener('keyup', function(e){
-  console.log('a');
-fetchRequest("GET", getDataUrl(getUserInput(e)), console.log);
+fetchRequest("GET", getDataUrl(getUserInput(e)), appendData);
 });
+
+function appendData(data) {
+    var dataList = document.getElementById('nobel-people');
+    dataList.innerHTML = '';
+
+    data.forEach(function(val) {
+      var option = document.createElement('option');
+      option.value = val;
+      dataList.appendChild(option);
+  });
+}
 
 
 function getUserInput(event){
@@ -21,7 +31,6 @@ function getUserInput(event){
 
 function getDataUrl(userInput){
   var url = 'search/' + userInput;
-  console.log(url);
   return url;
 }
 
