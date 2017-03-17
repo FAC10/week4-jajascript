@@ -31,6 +31,10 @@ function appendData(data) {
       aLink.target = "_blank";
 
   });
+
+  if (document.querySelector('input').value === '') {
+    dataList.innerHTML = '';
+  }
 }
 
 
