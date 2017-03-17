@@ -17,9 +17,17 @@ function appendData(data) {
     dataList.innerHTML = '';
 
     data.forEach(function(val) {
-      var option = document.createElement('option');
+      var option = document.createElement('li');
+      var aLink = document.createElement('a');
+      var googleLink = document.getElementsByTagName('a').href;
+      googleLink = 'http://google.com/search?q=' + encodeURI(val);
       option.value = val;
-      dataList.appendChild(option);
+      option.innerHTML = val;
+      dataList.appendChild(aLink);
+      aLink.appendChild(option);
+      aLink.href = googleLink;
+      aLink.target = "_blank";
+
   });
 }
 
