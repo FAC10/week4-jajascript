@@ -19,7 +19,7 @@ function getUserInput(event){
   }
 
 function getDataUrl(userInput){
-  var url = 'http://localhost:4000/search/' + userInput;
+  var url = 'https://nobel-laureate-autocomplete.herokuapp.com/search/' + userInput;
   console.log(url);
   return url;
 }

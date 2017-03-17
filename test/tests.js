@@ -4,7 +4,7 @@
 // });
 
   QUnit.test('Test that getDataUrl returns correct URL', function(assert) {
-    assert.equal(getDataUrl('barack'), 'http://localhost:4000/search/barack', 'Yay, our test works!');
+    assert.equal(getDataUrl('barack'), 'https://nobel-laureate-autocomplete.herokuapp.com/search/barack', 'Yay, our test works!');
   });
 
   QUnit.test('Test that getUserInput returns correct userInput', function(assert) {
