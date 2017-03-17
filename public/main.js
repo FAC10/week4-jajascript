@@ -3,13 +3,14 @@ var form = document.getElementById('form');
 
 form.addEventListener('keypress', function(e) {
   var regex = '[?<>=+()*&^%$£@!#:;``~{}\[|_\\\]]';
-  if (e.key.match(regex)) {
+  if (e.key.match(regex) || e.key === 'Enter') {
     e.preventDefault();
   }
 });
 
 form.addEventListener('input', function(e){
 fetchRequest("GET", getDataUrl(getUserInput(e)), appendData);
+e.preventDefault();
 });
 
 function appendData(data) {
