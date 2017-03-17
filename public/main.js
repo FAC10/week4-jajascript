@@ -31,6 +31,7 @@ function fetchRequest(method, url, cb){
     xhr.onreadystatechange = function(){
     if(xhr.readyState === 4 & xhr.status === 200){
       cb(xhr.responseText);
+      console.log(xhr.responseText)
     } else {
       console.log('Waiting for response');
     }
