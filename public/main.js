@@ -9,7 +9,8 @@ form.addEventListener('keypress', function(e) {
 });
 
 form.addEventListener('keyup', function(e){
-fetchRequest(form.method, getDataUrl(getUserInput(e)));
+  console.log('a');
+fetchRequest("GET", getDataUrl(getUserInput(e)), console.log);
 });
 
 
@@ -19,7 +20,7 @@ function getUserInput(event){
   }
 
 function getDataUrl(userInput){
-  var url = 'https://nobel-laureate-autocomplete.herokuapp.com/search/' + userInput;
+  var url = 'search/' + userInput;
   console.log(url);
   return url;
 }
@@ -30,8 +31,7 @@ function fetchRequest(method, url, cb){
   var xhr = new XMLHttpRequest ();
     xhr.onreadystatechange = function(){
     if(xhr.readyState === 4 & xhr.status === 200){
-      cb(xhr.responseText);
-      console.log(xhr.responseText)
+      cb(JSON.parse(xhr.responseText));
     } else {
       console.log('Waiting for response');
     }

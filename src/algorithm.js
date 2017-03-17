@@ -9,9 +9,9 @@ algorithm.serveHints = function(req, res) {
   var endpoint = req.url;
   searchString = endpoint.split('\/search\/')[1];
   var result = getValues(obj, 'firstname');
-  console.log(result);
-  // res.writeHead(200, { "Content-Type": 'text/plain'});
-  // res.end(results);
+console.log(result);
+   res.writeHead(200, { "Content-Type": 'text/plain'});
+   res.end(JSON.stringify(result));
 }
 
 function getValues(obj, key){
