@@ -8,8 +8,9 @@ The user should be able to enter a string into an input box which gives back a l
 
 ## Our Approach
   First we thought about the overall structure of our code, including:
+  
   * Modularisation
-  ![](Untitled Diagram.png)
+  ![Diagram of architecture](architecture-diagram.png)
 
   * Testing
   * File Structure
@@ -31,13 +32,13 @@ An autocomplete app which returns a list of nobel prize laureates which is infor
 ** Pending: learnings on handling JSON object & heroku logs **
 
 ## Installation instructions
- 
+
  - Clone this repo and cd into it
- 
+
  - `git clone git@github.com:FAC10/week4-jajascript.git`
- 
+
  - Run `npm install` to install all dependencies
- 
+
  - Run `npm run devStart` to start the server using nodemon (which will automatically restart Node when changes are detected in your files)
- 
+
  - Navigate to http://localhost:4000/ in your browser
