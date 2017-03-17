@@ -17,3 +17,13 @@ The user should be able to enter a string into an input box which gives back a l
 Technical spike: we researched whether we'd want to keep our data in the backend or make a call to an API, along with which data we'd use/ what the function of our autocomplete would be.
 
 Outcome: we'd use our own object with our own data structure in the backend
+
+### Things we learnt
+  * regex isn't just for codewars
+  * JSON objects - be mindful when using them
+
+Outcome:
+An autocomplete app which returns a list of nobel prize laureates which is informed by the user's input. Our master branch automatically deploys to heroku.
+
+
+** Pending: learnings on handling JSON object & heroku logs **
