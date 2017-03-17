@@ -18,7 +18,9 @@ function appendData(data) {
 
     data.forEach(function(val) {
       var option = document.createElement('li');
+      option.className += 'option-li';
       var aLink = document.createElement('a');
+      aLink.className += 'option-a';
       var googleLink = document.getElementsByTagName('a').href;
       googleLink = 'http://google.com/search?q=' + encodeURI(val);
       option.value = val;
