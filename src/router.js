@@ -3,7 +3,6 @@ var algorithm = require('./algorithm.js');
 
 module.exports = function(req, res) {
   var endpoint = req.url;
-
   if (endpoint === '/') {
     handler.serveHome(req, res);
   }
