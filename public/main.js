@@ -8,7 +8,7 @@ form.addEventListener('keypress', function(e) {
   }
 });
 
-form.addEventListener('keyup', function(e){
+form.addEventListener('input', function(e){
 fetchRequest("GET", getDataUrl(getUserInput(e)), appendData);
 });
 
