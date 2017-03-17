@@ -8,12 +8,15 @@ var searchString;
 algorithm.serveHints = function(req, res) {
   var endpoint = req.url;
   searchString = endpoint.split('\/search\/')[1];
-  getValues(obj, 'firstname');
+  var result = getValues(obj, 'firstname');
+  console.log(result);
+  // res.writeHead(200, { "Content-Type": 'text/plain'});
+  // res.end(results);
 }
 
 function getValues(obj, key){
     arr = obj.map(a=>`${a.firstname.toLowerCase()} ${a.surname.toLowerCase()}`);
-    autocomplete(searchString);
+    return autocomplete(searchString);
 }
 
 function autocomplete(searchString) {
@@ -23,6 +26,5 @@ function autocomplete(searchString) {
       autocompleteOptions.push(arr[i]);
     }
   }
-  console.log(autocompleteOptions)
   return autocompleteOptions;
 }
