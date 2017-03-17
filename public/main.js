@@ -33,7 +33,6 @@ function fetchRequest(method, url, cb){
       cb(xhr.responseText);
     } else {
       console.log('Waiting for response');
-    console.log(method);
     }
   };
 xhr.open(method, url, true);

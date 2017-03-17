@@ -1,26 +1,28 @@
 var fs = require('fs');
 var path = require ('path');
-
 var algorithm = module.exports = {};
-
 var obj = require('./data.json');
-
-function getValues(obj, key) {
-    var objects = [];
-    for (var i in obj) {
-      console.log("!!!!!!", i, obj[i])
-        if (!obj.hasOwnProperty(i)) continue;
-        if (typeof obj[i] == 'object') {
-            objects = objects.concat(getValues(obj[i], key));
-        } else if (i == key) {
-            objects.push(obj[i]);
-        }
-    }
-    console.log(objects);
-    return objects;
-}
+var arr;
+var searchString;
 
 algorithm.serveHints = function(req, res) {
   var endpoint = req.url;
+  searchString = endpoint.split('\/search\/')[1];
   getValues(obj, 'firstname');
+}
+
+function getValues(obj, key){
+    arr = obj.map(a=>`${a.firstname.toLowerCase()} ${a.surname.toLowerCase()}`);
+    autocomplete(searchString);
+}
+
+function autocomplete(searchString) {
+  var autocompleteOptions = [];
+  for (i = 0; i < arr.length; i++) {
+    if (searchString === arr[i].slice(0, searchString.length) && autocompleteOptions.length <10) {
+      autocompleteOptions.push(arr[i]);
+    }
+  }
+  console.log(autocompleteOptions)
+  return autocompleteOptions;
 }
