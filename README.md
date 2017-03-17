@@ -9,7 +9,7 @@ The user should be able to enter a string into an input box which gives back a l
 ## Our Approach
   First we thought about the overall structure of our code, including:
   * Modularisation
-  ![](./Untitled Diagram.png)
+  ![](Untitled Diagram.png)
 
   * Testing
   * File Structure
