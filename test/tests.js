@@ -6,3 +6,17 @@
   QUnit.test('Test that getDataUrl returns correct URL', function(assert) {
     assert.equal(getDataUrl('barack'), 'http://localhost:4000/search/barack', 'Yay, our test works!');
   });
+
+  function getUserInput(event){
+    userInput = event.target.value;
+    return userInput;
+    }
+
+  QUnit.test('Test that getUserInput returns correct userInput', function(assert) {
+      var event = {
+        target: {
+          value: 'bar'
+        }
+      }
+      assert.equal(getUserInput(event), 'bar', 'Yay, our test works!');
+    });
