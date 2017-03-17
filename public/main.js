@@ -8,7 +8,7 @@ form.addEventListener('keypress', function(e) {
   }
 });
 
-form.addEventListener('keyup', function(e){
+form.addEventListener('input', function(e){
 fetchRequest("GET", getDataUrl(getUserInput(e)), appendData);
 e.preventDefault();
 });
@@ -19,7 +19,9 @@ function appendData(data) {
 
     data.forEach(function(val) {
       var option = document.createElement('li');
+      option.className += 'option-li';
       var aLink = document.createElement('a');
+      aLink.className += 'option-a';
       var googleLink = document.getElementsByTagName('a').href;
       googleLink = 'http://google.com/search?q=' + encodeURI(val);
       option.value = val;
@@ -30,6 +32,10 @@ function appendData(data) {
       aLink.target = "_blank";
 
   });
+
+  if (document.querySelector('input').value === '') {
+    dataList.innerHTML = '';
+  }
 }
 
 

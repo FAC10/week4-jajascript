@@ -13,7 +13,6 @@ const readFile = (res, endpoint) => {
       console.log(err);
       handler.notFound(null, res);
     } else {
-      console.log(endpoint);
       var extension = endpoint.split('.')[1];
       var extensionType = {
         "html": "text/html",

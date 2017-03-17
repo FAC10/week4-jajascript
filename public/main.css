@@ -1,23 +1,48 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  text-align: center;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+
 }
 
 html{
   height: 100%;
+  background: url(assets/flowers_progressive.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body {
   height: 100%;
-  background: url(assets/flowers_progressive.jpg);
-  background-repeat:no-repeat;
-  background-size:cover;
-  padding: 2em;
-  /*overflow: hidden;*/
+  padding: 1em;
+  min-width: 320px;
+}
+
+/* RESETS */
+ul {
+  padding: 0;
+}
+
+.option-li {
+  list-style-type: none;
+}
+.option-a {
+  text-decoration: none;
+  padding: 1em;
+  font-size: 1.2em;
+  text-transform: capitalize;
+  color: #623B5A;
+}
+
+.option-a:hover {
+  color: #AF2BBF;
 }
 
 .landing-title{
-  color: black;
+  color: #353238;
 }
 
 #header, #form {
@@ -33,4 +58,27 @@ body {
   width: 200px;
   height: 30px;
   text-align: center;
+}
+
+#nobel-people {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  background: white;
+}
+
+#search-input {
+  width: 90%;
+  padding: 1em;
+  font-size: 1em;
+}
+
+@media(min-width: 850px) {
+  #search-input {
+    width: 60%;
+  }
+
+  #nobel-people {
+    width: 60%;
+  }
 }
