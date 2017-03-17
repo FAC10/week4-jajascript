@@ -2,6 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   text-align: center;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+
 }
 
 html{
@@ -31,15 +33,15 @@ ul {
   padding: 1em;
   font-size: 1.2em;
   text-transform: capitalize;
-
+  color: #623B5A;
 }
 
 .option-a:hover {
-  color: red;
+  color: #AF2BBF;
 }
 
 .landing-title{
-  color: black;
+  color: #353238;
 }
 
 #header, #form {
