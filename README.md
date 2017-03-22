@@ -8,7 +8,7 @@ The user should be able to enter a string into an input box which gives back a l
 
 ## Our Approach
   First we thought about the overall structure of our code, including:
-  
+
   * Modularisation
   ![Diagram of architecture](public/assets/architecture-diagram.png)
 
